@@ -9,16 +9,16 @@
               border-collapse: collapse;
               width: 100%;
             }
-            
-            #customers td, #customers th { 
+
+            #customers td, #customers th {
               border: 1px solid #ddd;
               padding: 8px;
             }
-            
+
             #customers tr:nth-child(even){background-color: #f2f2f2;}
-            
+
             #customers tr:hover {background-color: #ddd;}
-            
+
             #customers th {
               padding-top: 12px;
               padding-bottom: 12px;
@@ -112,7 +112,7 @@
               <span class="nav-link-text ms-1">Show Users Notes</span>
             </a>
           </li>
-          
+
           <li class="nav-item">
             <a class="nav-link text-white " href="{{url('/createmeetings')}}">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -194,7 +194,7 @@
     @include('admin.adminnav')
     <!-- End Navbar -->
     <div class="container-fluid py-4">
-      
+
 
         @include('admin.afternav')
 
@@ -208,7 +208,7 @@
             <th>action1</th>
             <th>action2</th>
             <th>action3</th>
-            
+
         </tr>
         @foreach ($attendance as $user)
         <tr>
@@ -216,29 +216,29 @@
             <td>{{$user->name}}</td>
             <td>{{$user->total_sec}}</td>
             <td>{{$user->login_time}}</td>
-            <td>{{$user->logou_time}}</td>
+            <td>{{$user->logout_time}}</td>
             @if($user->usertype == '1')
                <td> <p>Disabled</p> </td>
-            
+
             @else
                 <td class="btn-btn-danger"><a href="{{url('/deleteuser',$user->id)}}">Delete</a></td>
 
-            
+
             @endif
             @if($user->usertype == '1')
                 <td class="btn-btn-primary"><p>Disabled</p></td>
-            @else    
+            @else
                 <td class="btn-btn-primary"><a href="{{url('/choose',$user->id)}}">Choose</a></td>
             @endif
             @if($user->usertype == '1')
                 <td class="btn-btn-primary"><p>Disabled</p></td>
-            @else    
+            @else
                 <td class="btn-btn-primary"><a href="{{url('/redefine',$user->id)}}">redefine</a></td>
-            @endif       
+            @endif
         </tr>
 
         @endforeach
-        
+
         </table>
 
 

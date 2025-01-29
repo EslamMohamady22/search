@@ -37,21 +37,21 @@ class AdminController extends Controller
     }
     public function searchresult()
     {
-        
+
         $searchs = DB::table('users')
         ->Join('searches', 'users.id', '=', 'searches.user_id')
         ->select('users.id','users.name','users.last_login_at','users.last_logout_at','searches.searchresult','searches.created_at')
         ->get();
         return view('admin.searchresults',compact('searchs'));
     }
-    
+
     public function choose($id)
     {
 
-        
+
         $searchs = search::where('user_id',$id)->get();
         return view('admin.searchchoose',compact('searchs'));
-        
+
     }
     public function searchuser(Request $request)
     {
@@ -64,7 +64,7 @@ class AdminController extends Controller
     {
         return view('admin.adminadduser');
     }
-    
+
     public function addnewuser(Request $request)
     {
         $validatedData = $request->validate([
@@ -83,10 +83,10 @@ class AdminController extends Controller
             'phone.required' =>'please enter  phone ',
             'cv.required' =>'please upload  cv ',
             'address.required' =>'please enter  address '
-            
+
         ]);
 
-        
+
         // User::create([
         //     'name' => $request->name,
         //     'email' =>'es',
@@ -117,7 +117,7 @@ class AdminController extends Controller
         return view('admin.note');
 
     }
-    
+
     public function addnote(Request $request)
     {
         $data = new note();
@@ -138,7 +138,7 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
-    //chat 
+    //chat
     public function chatnow($id)
     {
         if(Auth::user()->usertype == '1'){
@@ -149,7 +149,7 @@ class AdminController extends Controller
             return view('user.chatuser',compact('reciever'));
 
         }
-       
+
     }
     public function deletmsg($id)
     {
@@ -157,7 +157,7 @@ class AdminController extends Controller
         $deletmsg->delete();
         return redirect()->back();
     }
-    
+
     public function search2(Request $request)
     {
         $users = User::where('name', 'LIKE' , '%'.$request->search.'%')
@@ -200,12 +200,12 @@ class AdminController extends Controller
     public function ajax(Request $request)
     {
       $set_time = User::find(auth()->user()->id);
-      
+
       $sec = $set_time->total_sec = $set_time->total_sec + 10;
-      
-      
-      
-    
+
+
+
+
       $set_time->update();
     //   return response()->json(['success'=>$sec ,'data'=>"data"]);
     }

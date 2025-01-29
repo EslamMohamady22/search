@@ -19,14 +19,13 @@ use App\Http\Controllers\ZoomController;
 |
 */
 
-Route::get('/', [HomeController::class,"index"]);
-Route::get('/redirect',[HomeController::class,"redirect"]);
+
 Route::get('/store_login',[HomeController::class,"store_login"]);
 Route::get('/store_logout',[HomeController::class,"store_logout"]);
 Route::get('/logout',[HomeController::class,"logout"]);
 Route::post('/ajax', [HomeController::class ,'ajax']);
 //user
-Route::middleware(['user'])->group(function () {
+Route::middleware(['user','auth'])->group(function () {
     Route::post('/search',[HomeController::class,"search"]);
     Route::get('chat/{id}', [HomeController::class ,'chat']);
     Route::get('/chat', [HomeController::class ,'chatuser']);
@@ -41,7 +40,7 @@ Route::middleware(['user'])->group(function () {
 });
 
 //admin
-Route::middleware(['admin'])->group(function () {
+Route::middleware(['admin','auth'])->group(function () {
     Route::get('/adminhome', [AdminController::class,"addashboard"]);
     Route::get('/users', [AdminController::class,"users"]);
     Route::get('/attendance', [AdminController::class,"attendance"]);
@@ -75,6 +74,8 @@ Route::middleware(['admin'])->group(function () {
 Route::middleware(['auth'])->group(function () {
 
     Route::post('sendfile',[AdminController::class ,'sendfile']);
+    Route::get('/', [HomeController::class,"index"]);
+    Route::get('/redirect',[HomeController::class,"redirect"]);
 });
 
 

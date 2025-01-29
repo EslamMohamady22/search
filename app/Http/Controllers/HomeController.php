@@ -131,6 +131,7 @@ public function store_login()
 }
 public function store_logout()
 {
+
     $store_logout =  Attendance::where('user_id',auth()->user()->id)->where('logout_time',null)->first();
     if($store_logout)
     {
