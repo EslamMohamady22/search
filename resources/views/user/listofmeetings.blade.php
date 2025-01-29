@@ -13,18 +13,18 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
-      <link rel="stylesheet" href="user/css/bootstrap.min.css">
+      <link rel="stylesheet" href="{{ asset('user/css/bootstrap.min.css') }}">
       <!-- style css -->
-      <link rel="stylesheet" href="user/css/style.css">
+      <link rel="stylesheet" href="{{ asset('user/css/style.css')}}">
       <!-- Responsive-->
-      <link rel="stylesheet" href="user/css/responsive.css">
+      <link rel="stylesheet" href="{{ asset('user/css/responsive.css')}}">
       <!-- fevicon -->
-      <link rel="icon" href="user/images/fevicon.png" type="user/image/gif" />
+      <link rel="icon" href="{{ asset('user/images/fevicon.png')}}" type="user/image/gif" />
       <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="user/css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="{{ asset('user/css/jquery.mCustomScrollbar.min.css') }}">
       <!-- Tweaks for older IEs-->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen')}}">
+      <link rel="stylesheet" href="{{ asset('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')}}">
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -115,7 +115,7 @@
    <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="user/images/loading.gif" alt="#" /></div>
+         <div class="loader"><img src="{{ asset('user/images/loading.gif')}}" alt="#" /></div>
       </div>
       <!-- end loader -->
       <!-- header -->
@@ -133,7 +133,7 @@
          </ol>
          <div class="carousel-inner">
             <div class="carousel-item active">
-               <img class="first-slide" src="user/images/banner.jpg" alt="First slide">
+               <img class="first-slide" src="{{ asset('user/images/banner.jpg')}}" alt="First slide">
                <div class="container">
                   <div class="carousel-caption relative">
                      <h1 > <span style="font-size: 50px" >@include('user/timer')</span></h1>

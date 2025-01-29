@@ -6,11 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="_token" content="{{csrf_token()}}" />
         <title>Grocery Store</title>
-        <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        <script src="{{ asset('http://code.jquery.com/jquery-3.3.1.min.js')}}"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous">
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="{{ asset('https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js')}}"></script>
 
         <title>Count Up Timer in JavaScript</title>
         {{-- <style>
@@ -38,23 +38,23 @@
         <div class="alert alert-success" style="display:none;"></div>
         <P style="color: red" id="listposts" ></P>
         <form  id="form1">
-            
-            
-           
+
+
+
         </form>
         {{-- <button >Try it</button> --}}
 
         <script>
         function myFunction2() {
-            $(document).ready(function () { 
-        $("#form1").submit(); 
-    //    $("#form2").submit(); 
-    }); 
+            $(document).ready(function () {
+        $("#form1").submit();
+    //    $("#form2").submit();
+    });
         }
         </script>
     </div>
-    
-    
+
+
     <script>
         jQuery(document).ready(function(){
         jQuery('#form1').submit(function(e){
@@ -74,7 +74,7 @@
                     // message: "eslam"
                 },
                 success: function(result){
-                    
+
                 }});
             });
         });

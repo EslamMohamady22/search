@@ -9,16 +9,16 @@
               border-collapse: collapse;
               width: 100%;
             }
-            
-            #customers td, #customers th { 
+
+            #customers td, #customers th {
               border: 1px solid #ddd;
               padding: 8px;
             }
-            
+
             #customers tr:nth-child(even){background-color: #f2f2f2;}
-            
+
             #customers tr:hover {background-color: #ddd;}
-            
+
             #customers th {
               padding-top: 12px;
               padding-bottom: 12px;
@@ -33,7 +33,7 @@
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href="{{url('/adminhome')}}" target="_blank">
-        <img src="admin/assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
+        <img src="{{ asset('admin/assets/img/logo-ct.png') }}" class="navbar-brand-img h-100" alt="main_logo">
         <span class="ms-1 font-weight-bold text-white">Admin Dashboard</span>
       </a>
     </div>
@@ -112,7 +112,7 @@
               <span class="nav-link-text ms-1">Show Users Notes</span>
             </a>
           </li>
-       
+
           <li class="nav-item">
             <a class="nav-link text-white " href="{{url('/createmeetings')}}">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -121,7 +121,7 @@
               <span class="nav-link-text ms-1">Create Zoom meeting</span>
             </a>
           </li>
-       
+
           <li class="nav-item">
             <a class="nav-link text-white " href="{{url('/list')}}">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -130,7 +130,7 @@
               <span class="nav-link-text ms-1">List All Meetings</span>
             </a>
           </li>
-       
+
       </ul>
     </div>
     <div class="sidenav-footer position-absolute w-100 bottom-0 ">
@@ -144,7 +144,7 @@
     @include('admin.adminnav')
     <!-- End Navbar -->
     <div class="container-fluid py-4">
-      
+
 
         @include('admin.afternav')
 
@@ -154,22 +154,22 @@
             <th>Agenda</th>
             <th>Start Time</th>
             <th>Start as a host</th>
-            <th>Join Url as attendee</th> 
-            <th>Action</th>           
+            <th>Join Url as attendee</th>
+            <th>Action</th>
         </tr>
         @foreach ($data as $data)
         <tr>
             <td>{{$data->topic}}</td>
             <td>{{$data->agenda}}</td>
             <td>{{$data->start_time}}</td>
-            <td class="btn-btn-primary"><a href="{{$data->start_url}}" target="_blank">Start Meeting as a host</a></td> 
-            <td class="btn-btn-primary"><a href="{{$data->join_url}}" target="_blank">{{$data->join_url}}</a></td> 
-        
-            <td class="btn-btn-primary"><a href="{{url('/deletemeeting',$data->id)}}">Delete Meeting</a></td> 
+            <td class="btn-btn-primary"><a href="{{$data->start_url}}" target="_blank">Start Meeting as a host</a></td>
+            <td class="btn-btn-primary"><a href="{{$data->join_url}}" target="_blank">{{$data->join_url}}</a></td>
+
+            <td class="btn-btn-primary"><a href="{{url('/deletemeeting',$data->id)}}">Delete Meeting</a></td>
 
         </tr>
         @endforeach
-        
+
         </table>
 
 

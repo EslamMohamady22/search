@@ -19,8 +19,8 @@
   overflow: hidden;
   }
   .top_spac{ margin: 20px 0 0;}
-  
-  
+
+
   .recent_heading {float: left; width:40%;}
   .srch_bar {
   display: inline-block;
@@ -28,7 +28,7 @@
   width: 60%;
   }
   .headind_srch{ padding:10px 29px 10px 20px; overflow:hidden; border-bottom:1px solid #c4c4c4;}
-  
+
   .recent_heading h4 {
   color: #05728f;
   font-size: 21px;
@@ -43,7 +43,7 @@
   font-size: 18px;
   }
   .srch_bar .input-group-addon { margin: 0 0 0 -27px;}
-  
+
   .chat_ib h5{ font-size:15px; color:#464646; margin:0 0 8px 0;}
   .chat_ib h5 span{ font-size:13px; float:right;}
   .chat_ib p{ font-size:14px; color:#989898; margin:auto}
@@ -56,7 +56,7 @@
   padding: 0 0 0 15px;
   width: 88%;
   }
-  
+
   .chat_people{ overflow:hidden; clear:both;}
   .chat_list {
   border-bottom: 1px solid #c4c4c4;
@@ -64,9 +64,9 @@
   padding: 18px 16px 10px;
   }
   .inbox_chat { height: 550px; overflow-y: scroll;}
-  
+
   .active_chat{ background:#ebebeb;}
-  
+
   .incoming_msg_img {
   display: inline-block;
   width: 6%;
@@ -98,7 +98,7 @@
   padding: 30px 15px 0 25px;
   width: 100%;
   }
-  
+
   .sent_msg p {
   background: #05728f none repeat scroll 0 0;
   border-radius: 3px;
@@ -106,7 +106,7 @@
   margin: 0; color:#fff;
   padding: 5px 10px 5px 12px;
   width:100%;
-  
+
   }
   .outgoing_msg{ overflow:hidden; margin:26px 0 26px;}
   .sent_msg {
@@ -121,9 +121,9 @@
   min-height: 0px;
   width: 100%;
   margin-bottom:20px;
-  
+
   }
-  
+
   .type_msg {border-top: 1px solid #c4c4c4;position: relative;}
   .msg_send_btn {
   background: #05728f none repeat scroll 0 0;
@@ -149,14 +149,14 @@
   }
   </style>
   @livewireStyles
-  
+
   </head>
 <body class="g-sidenav-show  bg-gray-200">
   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href="{{url('/adminhome')}}" target="_blank">
-        <img src="admin/assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
+        <img src="{{ asset('admin/assets/img/logo-ct.png')}}" class="navbar-brand-img h-100" alt="main_logo">
         <span class="ms-1 font-weight-bold text-white">Admin Dashboard</span>
       </a>
     </div>
@@ -188,7 +188,7 @@
             </a>
           </li>
         <li class="nav-item">
-            <a class="nav-link text-white " href="{{url('/searchresult')}}"> 
+            <a class="nav-link text-white " href="{{url('/searchresult')}}">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">table_view</i>
               </div>
@@ -227,7 +227,7 @@
             <span class="nav-link-text ms-1">Show Users Notes</span>
           </a>
         </li>
-        
+
         <li class="nav-item">
           <a class="nav-link text-white " href="{{url('/createmeetings')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -245,7 +245,7 @@
           </a>
         </li>
 
-       
+
       </ul>
     </div>
     <div class="sidenav-footer position-absolute w-100 bottom-0 ">
@@ -259,17 +259,17 @@
     @include('admin.adminnav')
     <!-- End Navbar -->
     <div class="container-fluid py-4">
-      
+
 
         @include('admin.afternav')
 
-     
+
             <x-slot name="header">
                <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                    {{ __('Dashboard') }}
                </h2>
            </x-slot>
-       
+
            <div class="py-12 overflow-y-scroll">
                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                    <div  class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -279,8 +279,8 @@
                    </div>
                </div>
            </div>
-       
-        
+
+
 
 
       @include('admin.adminfooter')
@@ -301,4 +301,4 @@
 
 </body>
 
-</html> 
+</html>
