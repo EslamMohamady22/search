@@ -28,7 +28,7 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-    
+
       <style>
         input{
           width: 500px;
@@ -36,10 +36,10 @@
           margin: 4px;
           padding: 8px;
           border:  1px solid grey;
-          border-radius: 25px;   
-          margin-left: 300px    
+          border-radius: 25px;
+          margin-left: 300px
         }
-      
+
 .button-18 {
   align-items: center;
   border: 0;
@@ -69,7 +69,7 @@
 }
 
 .button-18:hover,
-.button-18:focus { 
+.button-18:focus {
   background-color: #16437E;
   color: #ffffff;
 }
@@ -79,7 +79,7 @@
   color: rgb(255, 255, 255, .7);
 }
 
-.button-18:disabled { 
+.button-18:disabled {
   cursor: not-allowed;
   background: rgba(0, 0, 0, .08);
   color: rgba(0, 0, 0, .3);
@@ -94,7 +94,7 @@
           border-radius: 4px;
           resize: vertical;
         }
-        
+
         input[type=password]{
           width: 100%;
           padding: 12px;
@@ -102,14 +102,14 @@
           border-radius: 4px;
           resize: vertical;
         }
-        
-        
+
+
         label {
           padding: 12px 12px 12px 0;
-          margin-left:15px; 
+          margin-left:15px;
           display: inline-block;
         }
-        
+
         input[type=submit] {
           background-color: #04AA6D;
           width: 140px;
@@ -120,36 +120,36 @@
           cursor: pointer;
           float: right;
         }
-        
+
         input[type=submit]:hover {
           background-color: #45a049;
         }
-        
+
         .containers {
           border-radius: 5px;
           background-color: #f2f2f2;
           padding: 20px;
         }
-        
+
         .col-25 {
           float: left;
           width: 25%;
           margin-top: 6px;
         }
-        
+
         .col-75 {
           float: left;
           width: 75%;
           margin-top: 6px;
         }
-        
+
         /* Clear floats after the columns */
         .row:after {
           content: "";
           display: table;
           clear: both;
         }
-        
+
         /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 600px) {
           .col-25, .col-75, input[type=submit] {
@@ -157,7 +157,7 @@
             margin-top: 0;
           }
         }
-        
+
         </style>
    </head>
    <!-- body -->
@@ -190,7 +190,7 @@
                   </div>
                </div>
             </div>
-            
+
          </div>
          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -208,11 +208,11 @@
             {{-- <div class="row d_flex"> --}}
                {{-- <div class="col-md-7" > --}}
                 <div class="titlepage">
-                    <h2 align="center">Add Notes</h2>
+                    <h2 align="center">Add Notes tttttt</h2>
                     <div class="containers">
 
                         <br>
-                        
+
                         <form action="{{url('/addusernote')}}" method="POST">
                             @csrf
                           <div class="row" >
@@ -223,7 +223,7 @@
                                 <input type="text" name="title"  placeholder="Enter title" id="name" required>
                             </div>
                           </div>
-                          
+
                           <br>
                           <div class="row">
                             <div class="col-25">
@@ -233,16 +233,16 @@
                               <textarea id="subject" name="note" placeholder="Write something.." style="height:200px"></textarea>
                             </div>
                           </div>
-            
+
                           <div class="row">
                             <input type="submit" value="Add Note">
                         </div>
                         </form>
                     </div>
 
-                      
+
                 </div>
-        
+
 
       </div>
     </div>

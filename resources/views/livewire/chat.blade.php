@@ -3,10 +3,10 @@
         <h3 class=" text-center">
 
          <!--   @if (auth()->user()->email == 'eslamalkbeer887@gmail.com')
-               
+
             @endif-->
             <a class="btn btn-primary" href="{{ Url('delete_chat/'.$reciever) }}">حذف المحادثة</a>
-{{--            
+{{--
              @if($name->name != null)
             <p>{{$name->name}}</p>
             @endif  --}}
@@ -20,41 +20,41 @@
                         </div>
                         <div class="srch_bar">
                             <div class="stylish-input-group">
-                                
+
                                     <input type="text" class="search-bar" wire:keydown="search" wire:model.defer="searchh"  placeholder="Search" >
-                               
-                                
-                                                            
-                              
+
+
+
+
                                 <span class="input-group-addon">
-                                    <button type="button"> 
-                                        <i class="fa fa-search" aria-hidden="true"></i> 
+                                    <button type="button">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
                                     </button>
-                                </span> 
+                                </span>
                             </div>
                         </div>
                     </div>
                     <!-- inbox chat users -->
                     <div class="inbox_chat">
- 
-                         
+
+
                     @if ($user != null)
                         @foreach ($user as $item)
-                        
+
                             <div class="chat_list active_chat">
                                 <div class="chat_people">
-                                    <div class="chat_img"> 
-                                        <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> 
+                                    <div class="chat_img">
+                                        <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
                                     </div>
                                     <div class="chat_ib">
                                         <a href="{{url('chatnow/'.$item->id)}}" >
                                             <h5>
-                                                {{$item->name}} 
+                                                {{$item->name}}
                                                 <span class="chat_date"></span>
                                             </h5>
                                         </a>
                                         <p>
-                                            Test, which is a new approach to have all solutions 
+                                            Test, which is a new approach to have all solutions
                                             astrology under one roof.
                                         </p>
                                     </div>
@@ -62,22 +62,22 @@
                             </div>
                         @endforeach
                     @else
-                            @if(Auth::user()->usertype == '1') 
+                            @if(Auth::user()->usertype == '1')
                                     @foreach ($users as $item)
                                         <div class="chat_list active_chat">
                                             <div class="chat_people">
-                                                <div class="chat_img"> 
-                                                    <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> 
+                                                <div class="chat_img">
+                                                    <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
                                                 </div>
                                                 <div class="chat_ib">
                                                     <a href="{{url('chatnow/'.$item->id)}}" >
                                                         <h5>
-                                                            {{$item->name}} 
+                                                            {{$item->name}}
                                                             <span class="chat_date"></span>
                                                         </h5>
                                                     </a>
                                                     <p>
-                                                        Test, which is a new approach to have all solutions 
+                                                        Test, which is a new approach to have all solutions
                                                         astrology under one roof.
                                                     </p>
                                                 </div>
@@ -85,31 +85,31 @@
                                         </div>
                                     @endforeach
                             @else
-                                
+
                                 @foreach ($users as $item)
                                        @if($item->usertype == '1')
                                             <div class="chat_list active_chat">
                                                 <div class="chat_people">
-                                                        <div class="chat_img"> 
-                                                            <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> 
+                                                        <div class="chat_img">
+                                                            <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
                                                         </div>
                                                         <div class="chat_ib">
                                                             <a href="{{url('chat/'.$item->id)}}" >
                                                                 <h5>
-                                                                    {{$item->name}} 
+                                                                    {{$item->name}}
                                                                     <span class="chat_date"></span>
                                                                 </h5>
                                                             </a>
                                                             <p>
-                                                                Test, which is a new approach to have all solutions 
+                                                                Test, which is a new approach to have all solutions
                                                                 astrology under one roof.
                                                             </p>
                                                         </div>
                                                 </div>
                                             </div>
-                                        @endif    
+                                        @endif
                                     @endforeach
-                            @endif    
+                            @endif
                     @endif
                     </div>
                 </div>
@@ -129,8 +129,8 @@
                                         <p>
                                             <a href="{{url('deletmsg/'.$message->id)}}" >Delet</a>
                                             {{ $message->message_text }}
-                                        
-                                        
+
+
                                         </p>
                                         <span class="time_date">
                                             {{ $message->created_at->diffForHumans() }}</span>
@@ -154,8 +154,8 @@
                                         <p>
                                             <a href="{{url('deletmsg/'.$message->id)}}" >Delet</a>
                                             {{ $message->message_text }}
-                                        
-                                        
+
+
                                         </p>
                                         <span class="time_date">
                                             {{ $message->created_at->diffForHumans() }}</span>
@@ -185,8 +185,8 @@
                                     <p>
                                         <a href="{{url('deletmsg/'.$message->id)}}" >Delet</a>
                                         {{ $message->message_text }}
-                                    
-                                    
+
+
                                     </p>
                                     <span class="time_date">
                                         {{ $message->created_at->diffForHumans() }}</span>
@@ -198,13 +198,13 @@
                                 @endif
                                 </div>
                             </div>
-                            
+
 
                         @else
                             @if ( $message->created_at->diffForHumans()  == '3 seconds ago' || $message->created_at->diffForHumans()  == '2 seconds ago' || $message->created_at->diffForHumans()  == '1 seconds ago' || $message->created_at->diffForHumans()  == '4 seconds ago')
                                         <audio  id="audio2" src="..\audios\ms.mp3" autoplay ></audio>
-                                        
-                                        
+
+
                             @endif
 
                             <div class="incoming_msg">
@@ -212,13 +212,13 @@
                                         src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                                 <div class="received_msg">
                                     <div class="received_withd_msg">
-                                        
+
                                         @if ($message->message_text != null)
                                         <p>
                                             <a href="{{url('deletmsg/'.$message->id)}}" >Delet</a>
                                             {{ $message->message_text }}
-                                        
-                                        
+
+
                                         </p>
                                         <span class="time_date">
                                             {{ $message->created_at->diffForHumans() }}</span>
@@ -237,7 +237,7 @@
                         <h5 style="text-align: center;color:red"> لاتوجد رسائل سابقة</h5>
                     @endforelse
                         @endif
-                       
+
 
                     </div>
                     <div class="type_msg">
@@ -254,7 +254,7 @@
                                         class="write_msg" placeholder="اكتب رسالتك"  required/>
                                         <input onkeydown='scrollDown()' name="rcv_id" value="{{$reciever}}" type="hidden"
                                         class="write_msg" placeholder="اكتب رسالتك" />
-                                       
+
                                         <button style="background-color: green;margin-top:60px" class="msg_send_btn" type="submit">ارسال</button>
                             </form>
                         </div>

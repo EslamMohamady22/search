@@ -59,7 +59,6 @@ Route::middleware(['admin'])->group(function () {
     Route::get('chatnow/{id}', [AdminController::class ,'chatnow']);
     Route::get('/deletmsg/{id}', [AdminController::class ,'deletmsg']);
     Route::get('/search', [AdminController::class ,'search2']);
-    Route::post('sendfile',[AdminController::class ,'sendfile']);
     Route::get('delete_chat/{id}', function ($id) {
         Message::whereIn('user_id', [$id, auth()->user()->id])
         ->whereIn('reciever_id', [$id, auth()->user()->id])->delete();
@@ -73,6 +72,11 @@ Route::middleware(['admin'])->group(function () {
 
 
 });
+Route::middleware(['auth'])->group(function () {
+
+    Route::post('sendfile',[AdminController::class ,'sendfile']);
+});
+
 
 Route::middleware([
     'auth:sanctum',
@@ -105,5 +109,3 @@ Route::get('/deletemeeting/{id}',[MeetingController::class,'/deletemeeting']);
 //Route::delete('/meetings/{id}', [MeetingController::class,'delete'])->where('id', '[0-9]+');
 
 
-Route::get('/auth/zoom', [ZoomController::class,'redirectToZoom']);
-Route::get('/auth/zoom/callback', [ZoomController::class,'handleZoomCallback']);

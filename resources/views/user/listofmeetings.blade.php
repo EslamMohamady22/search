@@ -28,7 +28,7 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-    
+
       <style>
         input{
           width: 500px;
@@ -36,10 +36,10 @@
           margin: 4px;
           padding: 8px;
           border:  1px solid grey;
-          border-radius: 25px;   
-          margin-left: 300px    
+          border-radius: 25px;
+          margin-left: 300px
         }
-      
+
 .button-18 {
   align-items: center;
   border: 0;
@@ -69,7 +69,7 @@
 }
 
 .button-18:hover,
-.button-18:focus { 
+.button-18:focus {
   background-color: #16437E;
   color: #ffffff;
 }
@@ -79,7 +79,7 @@
   color: rgb(255, 255, 255, .7);
 }
 
-.button-18:disabled { 
+.button-18:disabled {
   cursor: not-allowed;
   background: rgba(0, 0, 0, .08);
   color: rgba(0, 0, 0, .3);
@@ -92,16 +92,16 @@
           border-collapse: collapse;
           width: 100%;
         }
-        
-        #customers td, #customers th { 
+
+        #customers td, #customers th {
           border: 1px solid #ddd;
           padding: 8px;
         }
-        
+
         #customers tr:nth-child(even){background-color: #f2f2f2;}
-        
+
         #customers tr:hover {background-color: #ddd;}
-        
+
         #customers th {
           padding-top: 12px;
           padding-bottom: 12px;
@@ -141,7 +141,7 @@
                   </div>
                </div>
             </div>
-            
+
          </div>
          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -157,13 +157,13 @@
          <div id="about"  class="about">
             <div class="container">
                <div class="titlepage">
-                  <h2 align="center">Show Notes</h2>
+                  <h2 align="center">Show Meetings</h2>
                      <table id="customers" style="margin-top: 8px">
                         <tr>
                               <th>Topic</th>
                               <th>Agenda</th>
                               <th>Start time</th>
-                              <th>Start Meeting as attendee</th>            
+                              <th>Start Meeting as attendee</th>
                         </tr>
                         @foreach ($data as $data)
                            <tr>
@@ -178,11 +178,11 @@
                                 </td>
                            </tr>
                         @endforeach
-                     </table>                
-                     
+                     </table>
+
                </div>
             </div>
-               
+
          </div>
       <!-- end about -->
       <!-- mobile -->

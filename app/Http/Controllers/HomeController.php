@@ -16,7 +16,7 @@ class HomeController extends Controller
     public function index(){
 
         if(Auth::id()){
-            
+
             return redirect("/redirect");
         }
         else{
@@ -36,7 +36,7 @@ class HomeController extends Controller
                     $contact = User::find(auth()->user()->id);
             $sec = $contact->total_sec ;
             return view("home",compact("sec"));
-                    
+
                 }
         }
         else{
@@ -65,16 +65,16 @@ class HomeController extends Controller
     }
     public function usernote()
     {
-        
+
             $contact = User::find(auth()->user()->id);
-    $sec = $contact->total_sec ;
+            $sec = $contact->total_sec ;
     return view("user.usernotes",compact("sec"));
     }
     public function addusernote(Request $request)
     {
         $contact = User::find(auth()->user()->id);
         $sec = $contact->total_sec ;
-        return view("user.usernotes",compact("sec"));
+        // return view("user.usernotes",compact("sec"));
         $usernote = new usernotes();
         $usernote->user_id = Auth::id();
         $usernote->title = $request->title;
@@ -111,11 +111,11 @@ class HomeController extends Controller
     public function ajax(Request $request)
 {
   $set_time = User::find(auth()->user()->id);
-  
+
   $sec = $set_time->total_sec = $set_time->total_sec + 10;
-  
-  
-  
+
+
+
 
   $set_time->update();
 //   return response()->json(['success'=>$sec ,'data'=>"data"]);
@@ -137,7 +137,7 @@ public function store_logout()
         $store_logout->logout_time = now();
         $store_logout->update();
     }
-   
+
     return redirect()->to('/logout');
 }
 
@@ -148,12 +148,12 @@ public function store_logout()
     //     if($last_logout)
     // {
     //     $last_logout->logout_time = $user->last_logout_at;
-        
+
     //     $last_logout->update();
     // }
-        
+
         return redirect()->route('login');
     }
-    
+
 
 }

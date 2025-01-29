@@ -24,9 +24,7 @@ class EventServiceProvider extends ServiceProvider
         'Illuminate\Auth\Events\Logout' => [
             'App\Listeners\UserLogoutAt',
         ],
-        \SocialiteProviders\Manager\SocialiteWasCalled::class => [
-            'SocialiteProviders\\Zoom\\ZoomExtendSocialite@handle',
-        ],
+       
     ];
 
     /**
