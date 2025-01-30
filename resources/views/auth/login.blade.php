@@ -5,26 +5,26 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="loginn/images/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="{{asset('loginn/images/icons/favicon.ico')}}"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="loginn/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('loginn/vendor/bootstrap/css/bootstrap.min.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="loginn/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('loginn/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="loginn/fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('loginn/fonts/iconic/css/material-design-iconic-font.min.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="loginn/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('loginn/vendor/animate/animate.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="loginn/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('loginn/vendor/css-hamburgers/hamburgers.min.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="loginn/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('loginn/vendor/animsition/css/animsition.min.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="loginn/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('loginn/vendor/select2/select2.min.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="loginn/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('loginn/vendor/daterangepicker/daterangepicker.css')}}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="loginn/css/util.css">
-	<link rel="stylesheet" type="text/css" href="loginn/css/main.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('loginn/css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('loginn/css/main.css')}}">
 <!--===============================================================================================-->
 </head>
 <body  background="loginn/images/back.jpg">
@@ -48,7 +48,7 @@
 					<span class="login100-form-title p-b-34 p-t-27">
 						Log in
 					</span>
- 
+
 					<div class="wrap-input100 validate-input" data-validate = "Enter name ">
 						<input class="input100" type="text" name="name" placeholder="Name" id="name" required>
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
